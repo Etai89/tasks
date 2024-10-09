@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etai - Task Board - README</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #007bff;
+        }
+
+        h1 {
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            margin-top: 20px;
+        }
+
+        h3 {
+            margin-top: 15px;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        code {
+            background-color: #e9ecef;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .code-snippet {
+            background-color: #e9ecef;
+            padding: 10px;
+            border-radius: 5px;
+            overflow: auto;
+            margin: 10px 0;
+        }
+
+        #links {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .link {
+            font-size: 14px;
+            margin: 0 10px;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .link:hover {
+            text-decoration: underline;
+        }
+
+        #copyright {
+            display: flex;
+            justify-content: center;
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Etai - Task Board App</h1>
+
+    <p>A simple web-based sticky notes application that allows users to add, display, and delete tasks with an optional
+        text-to-speech feature. Tasks are saved to <code>localStorage</code>, so they persist across page reloads.</p>
+
+    <h2>Features</h2>
+    <ul>
+        <li><strong>Add Tasks:</strong> Users can add tasks with a description, date, and time.</li>
+        <li><strong>Display Tasks:</strong> Tasks are displayed in a sticky note format. Expired tasks are highlighted
+            in red.</li>
+        <li><strong>Delete Tasks:</strong> Users can delete individual tasks.</li>
+        <li><strong>Text-to-Speech:</strong> When enabled, the app announces tasks and deletions using the browser's
+            speech synthesis.</li>
+        <li><strong>Persistent Storage:</strong> All tasks are saved in <code>localStorage</code> and persist even when
+            the page is reloaded.</li>
+    </ul>
+
+    <h2>How to Use</h2>
+    <ol>
+        <li><strong>Add a Task:</strong>
+            <p>Enter the task description, date, and time. Click "Add" to save the task. If any fields are empty or if
+                the date and time are in the past, the task will not be added.</p>
+        </li>
+        <li><strong>View Tasks:</strong>
+            <p>Tasks are displayed with their descriptions, dates, and times. Expired tasks are marked in red.</p>
+        </li>
+        <li><strong>Delete a Task:</strong>
+            <p>Click the delete icon on a task to remove it. You will hear a confirmation message if the text-to-speech
+                feature is enabled.</p>
+        </li>
+        <li><strong>Text-to-Speech:</strong>
+            <p>Enable the "Text-to-Speech" checkbox to have tasks read aloud when added or deleted.</p>
+        </li>
+        <li><strong>Reset Input Fields:</strong>
+            <p>Click the "Reset" button to clear all input fields.</p>
+        </li>
+    </ol>
+
+    <h2>Files</h2>
+    <ul>
+        <li><code>index.html</code>: Contains the HTML structure of the app.</li>
+        <li><code>styles.css</code>: Contains the styling for the app.</li>
+        <li><code>script.js</code>: Contains the JavaScript code for app functionality.</li>
+    </ul>
+
+    <h2>Setup</h2>
+    <ol>
+        <li>Clone or download the repository.</li>
+        <li>Open <code>index.html</code> in a web browser to start using the app.</li>
+    </ol>
+
+
+
+    <h2>Notes</h2>
+    <p>This app requires the browser to support <code>localStorage</code> and the <code>SpeechSynthesis</code> API for
+        full functionality. Tasks are checked for expiry based on the current date and time.</p>
+
+    <div id="links">
+        <a class="link" href="https://github.com/Etai89/taskboard" target="_blank">GitHub Repository</a>
+        <a class="link" href="readme.txt" target="_blank">ReadMe file</a>
+    </div>
+    <div id="copyright">
+        <p>© 2024 Etai Hatuel. All rights reserved.</p>
+
+    </div>
+
+</body>
+
+</html>

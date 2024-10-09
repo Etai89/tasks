@@ -1,0 +1,240 @@
+body {
+    background-image: url('pic/woodboard.png');
+    background-size: 100%;
+    text-align: center;
+}
+
+body #mainTitle {
+    margin-top: 10px;
+    text-shadow: -2px -3px 5px black;
+}
+
+#links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.link {
+    font-size: 14px;
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+    text-shadow: 1px 1px 5px black;
+}
+
+.link:hover {
+    text-decoration: underline;
+    font-size: 15px;
+    color: rgb(233, 207, 207);
+}
+
+#main #taskFolder {
+    text-align: center;
+    margin-top: 12px;
+    padding-top: 42px;
+    padding-bottom: 39px;
+    background-image: url('pic/paper.png');
+    object-fit: cover;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+#main #taskFolder #missionText {
+    text-align: center;
+    width: 300px;
+    height: 90px;
+    opacity: 95%;
+    border: 0px;
+    background-color: transparent;
+    margin-bottom: 7px;
+    font-size: 21px;
+    color: rgb(22, 109, 58);
+    resize: none;
+    outline: none;
+}
+
+::placeholder {
+    color: rgb(22, 109, 58);
+    text-shadow: -1px -1px 50px black;
+}
+
+#main #taskFolder #time,
+#date {
+    width: 140px;
+    opacity: 95%;
+
+    border: 0px;
+    background-color: transparent;
+    font-size: 18px;
+    margin-bottom: 15px;
+
+}
+
+#main #add,
+#reset {
+    width: 120px;
+    height: 38px;
+    border: 0px;
+    border-radius: 35%;
+    background-color: rgb(250, 252, 170);
+    margin-top: 7px;
+    box-shadow: -2px 2px 6px black;
+    text-shadow: -1px -1px 1px rgb(0, 0, 0);
+    margin-right: 5px;
+    font-size: 18px;
+}
+
+#tasks #taskBoard {
+    display: flex;
+    justify-content: space-around;
+}
+
+#tasks #taskBoard #task {
+    direction: ltr;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#tasks #taskBoard #task .sticky {
+    background-image: url('pic/sticky-note.png');
+    font-size: 22px;
+    object-fit: cover;
+    padding: 25px;
+    width: 250px;
+    height: 250px;
+    margin: 17px;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in forwards;
+}
+
+#tasks #taskBoard #task .sticky .date {
+    position: absolute;
+    margin-left: 120px;
+    width: 85px;
+    font-size: 10px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+#tasks #taskBoard #task .sticky .mission {
+    position: relative;
+    margin-top: 30px;
+    margin-left: 20px;
+    width: 160px;
+    height: 110px;
+    overflow-y: scroll;
+    text-align: center;
+}
+
+#tasks #taskBoard #task .sticky .arrow {
+    display: flex;
+    margin-right: 20px;
+    padding-bottom: 8px;
+    position: absolute;
+    width: 100px;
+    transform: translateX(-1000px) rotate(-10deg);
+    animation: fadeInLeft 1s ease forwards;
+    z-index: 5000;
+}
+
+.sticky .delete {
+    margin-left: 166px;
+    position: absolute;
+    padding: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+@keyframes fadeInLeft {
+    to {
+        transform: translateX(0) rotate(10deg);
+    }
+}
+
+.sticky:hover .delete {
+    display: block;
+    direction: rtl;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        width: 200px;
+    }
+
+    100% {
+        opacity: 1;
+        width: 250px;
+    }
+}
+
+.glyphicon-remove {
+    font-size: 18px;
+}
+
+#copyright{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    
+}
+#copyright p {
+    font-size: 14px;
+}
+
+@media (max-width:800px) {
+    #tasks #taskBoard #task {
+        direction: ltr;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    #main #taskFolder {
+        text-align: center;
+        margin-top: 12px;
+        padding-top: 42px;
+        padding-bottom: 39px;
+        background-image: url('pic/paper.png');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    #main #taskFolder #missionText {
+        text-align: center;
+        width: 300px;
+        height: 80px;
+        opacity: 95%;
+        border: 0px;
+        background-color: transparent;
+        /* margin-bottom: 15px; */
+        font-size: 21px;
+        color: rgb(22, 109, 58);
+        resize: none;
+        outline: none;
+    }
+
+    #main #taskFolder #time,
+    #date {
+        width: 140px;
+        opacity: 95%;
+        height: 20px;
+        border: 0px;
+        background-color: transparent;
+        font-size: 18px;
+        /* margin-top: 10px; */
+    }
+
+    #main #taskFolder #time {
+        margin-bottom: -5px;
+    }
+
+}
